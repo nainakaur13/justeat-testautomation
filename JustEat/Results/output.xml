@@ -1,0 +1,1437 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.1.2 (Python 3.7.4 on win32)" generated="20200207 04:43:14.590" rpa="false">
+<suite id="s1" name="JustEat" source="D:\SQAAutomation\JustEat\Testcases\JustEat.robot">
+<kw name="Common Suite Setup" library="Common" type="setup">
+<doc>All test suites should use this in suite Setup.</doc>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${MAX_TIMEOUT}</arg>
+<arg>30s</arg>
+</arguments>
+<msg timestamp="20200207 04:43:15.739" level="INFO">${MAX_TIMEOUT} = 30s</msg>
+<status status="PASS" starttime="20200207 04:43:15.737" endtime="20200207 04:43:15.739"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${RETRY_INTERBAL}</arg>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20200207 04:43:15.740" level="INFO">${RETRY_INTERBAL} = 2s</msg>
+<status status="PASS" starttime="20200207 04:43:15.739" endtime="20200207 04:43:15.741"></status>
+</kw>
+<status status="PASS" starttime="20200207 04:43:15.737" endtime="20200207 04:43:15.741"></status>
+</kw>
+<test id="s1-t1" name="Search for restaurants in an area">
+<kw name="Common Test Setup" library="Common" type="setup">
+<doc>All test cases should use this in Test Setup.</doc>
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>${URL}</arg>
+<arg>${Browser}</arg>
+</arguments>
+<msg timestamp="20200207 04:43:15.743" level="INFO">Opening browser 'chrome' to base url 'http://www.just-eat.co.uk'.</msg>
+<status status="PASS" starttime="20200207 04:43:15.742" endtime="20200207 04:43:54.395"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20200207 04:43:54.395" endtime="20200207 04:43:55.620"></status>
+</kw>
+<kw name="Verify home page loaded correctly" library="Common">
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<arguments>
+<arg>wait until keyword succeeds</arg>
+<arg>${MAX_TIMEOUT}</arg>
+<arg>${RETRY_INTERBAL}</arg>
+<arg>page should contain element</arg>
+<arg>${homepage_search_box}</arg>
+</arguments>
+<assign>
+<var>${status}</var>
+<var>${message}</var>
+</assign>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>${MAX_TIMEOUT}</arg>
+<arg>${RETRY_INTERBAL}</arg>
+<arg>page should contain element</arg>
+<arg>${homepage_search_box}</arg>
+</arguments>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${homepage_search_box}</arg>
+</arguments>
+<msg timestamp="20200207 04:43:55.637" level="INFO">Current page contains element '//div[@data-test-id="searchBoxContainer"]'.</msg>
+<status status="PASS" starttime="20200207 04:43:55.622" endtime="20200207 04:43:55.638"></status>
+</kw>
+<status status="PASS" starttime="20200207 04:43:55.621" endtime="20200207 04:43:55.638"></status>
+</kw>
+<msg timestamp="20200207 04:43:55.638" level="INFO">${status} = PASS</msg>
+<msg timestamp="20200207 04:43:55.638" level="INFO">${message} = None</msg>
+<status status="PASS" starttime="20200207 04:43:55.621" endtime="20200207 04:43:55.638"></status>
+</kw>
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<arguments>
+<arg>wait until keyword succeeds</arg>
+<arg>${MAX_TIMEOUT}</arg>
+<arg>${RETRY_INTERBAL}</arg>
+<arg>page should contain</arg>
+<arg>Find restaurants delivering right now, near you</arg>
+</arguments>
+<assign>
+<var>${status}</var>
+<var>${message}</var>
+</assign>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>${MAX_TIMEOUT}</arg>
+<arg>${RETRY_INTERBAL}</arg>
+<arg>page should contain</arg>
+<arg>Find restaurants delivering right now, near you</arg>
+</arguments>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>Find restaurants delivering right now, near you</arg>
+</arguments>
+<msg timestamp="20200207 04:43:55.657" level="INFO">Current page contains text 'Find restaurants delivering right now, near you'.</msg>
+<status status="PASS" starttime="20200207 04:43:55.639" endtime="20200207 04:43:55.657"></status>
+</kw>
+<status status="PASS" starttime="20200207 04:43:55.638" endtime="20200207 04:43:55.657"></status>
+</kw>
+<msg timestamp="20200207 04:43:55.657" level="INFO">${status} = PASS</msg>
+<msg timestamp="20200207 04:43:55.657" level="INFO">${message} = None</msg>
+<status status="PASS" starttime="20200207 04:43:55.638" endtime="20200207 04:43:55.657"></status>
+</kw>
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<arguments>
+<arg>wait until keyword succeeds</arg>
+<arg>${MAX_TIMEOUT}</arg>
+<arg>${RETRY_INTERBAL}</arg>
+<arg>page should contain element</arg>
+<arg>${footer-locations-cuisines}</arg>
+</arguments>
+<assign>
+<var>${status}</var>
+<var>${message}</var>
+</assign>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>${MAX_TIMEOUT}</arg>
+<arg>${RETRY_INTERBAL}</arg>
+<arg>page should contain element</arg>
+<arg>${footer-locations-cuisines}</arg>
+</arguments>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${footer-locations-cuisines}</arg>
+</arguments>
+<msg timestamp="20200207 04:43:55.672" level="INFO">Current page contains element '//ul[@id="footer-locations" or @id="footer-top-cuisines"]'.</msg>
+<status status="PASS" starttime="20200207 04:43:55.659" endtime="20200207 04:43:55.673"></status>
+</kw>
+<status status="PASS" starttime="20200207 04:43:55.658" endtime="20200207 04:43:55.673"></status>
+</kw>
+<msg timestamp="20200207 04:43:55.673" level="INFO">${status} = PASS</msg>
+<msg timestamp="20200207 04:43:55.673" level="INFO">${message} = None</msg>
+<status status="PASS" starttime="20200207 04:43:55.658" endtime="20200207 04:43:55.673"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${status}'=='FAIL'</arg>
+<arg>run keyword</arg>
+<arg>FAIL</arg>
+<arg>Home Page Failed to load</arg>
+</arguments>
+<status status="PASS" starttime="20200207 04:43:55.673" endtime="20200207 04:43:55.674"></status>
+</kw>
+<status status="PASS" starttime="20200207 04:43:55.620" endtime="20200207 04:43:55.674"></status>
+</kw>
+<status status="PASS" starttime="20200207 04:43:15.742" endtime="20200207 04:43:55.674"></status>
+</kw>
+<kw name="Search for restaurants by area" library="JustEat">
+<doc>This keyword finds restaurants in specifc area(using postcode)
+Postcode is passed as an argument</doc>
+<arguments>
+<arg>${postcode}</arg>
+</arguments>
+<kw name="Enter search address" library="LandingPage">
+<doc>Enter postcode in search box.</doc>
+<arguments>
+<arg>${postcode}</arg>
+</arguments>
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<arguments>
+<arg>Wait Until Keyword Succeeds</arg>
+<arg>${MAX_TIMEOUT}</arg>
+<arg>${RETRY_INTERBAL}</arg>
+<arg>SeleniumLibrary.Input Text</arg>
+<arg>${search_address_input}</arg>
+<arg>${postcode}</arg>
+</arguments>
+<assign>
+<var>${status}</var>
+<var>${message}</var>
+</assign>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>${MAX_TIMEOUT}</arg>
+<arg>${RETRY_INTERBAL}</arg>
+<arg>SeleniumLibrary.Input Text</arg>
+<arg>${search_address_input}</arg>
+<arg>${postcode}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${search_address_input}</arg>
+<arg>${postcode}</arg>
+</arguments>
+<msg timestamp="20200207 04:43:55.678" level="INFO">Typing text 'AR51 1AA' into text field 'xpath://input[@data-test-id="address-box-input"]'.</msg>
+<status status="PASS" starttime="20200207 04:43:55.677" endtime="20200207 04:43:55.882"></status>
+</kw>
+<status status="PASS" starttime="20200207 04:43:55.677" endtime="20200207 04:43:55.882"></status>
+</kw>
+<msg timestamp="20200207 04:43:55.882" level="INFO">${status} = PASS</msg>
+<msg timestamp="20200207 04:43:55.882" level="INFO">${message} = None</msg>
+<status status="PASS" starttime="20200207 04:43:55.676" endtime="20200207 04:43:55.882"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${status}'=='FAIL'</arg>
+<arg>run keyword</arg>
+<arg>FAIL</arg>
+<arg>Unable to enter postcode in search box</arg>
+</arguments>
+<status status="PASS" starttime="20200207 04:43:55.883" endtime="20200207 04:43:55.883"></status>
+</kw>
+<status status="PASS" starttime="20200207 04:43:55.676" endtime="20200207 04:43:55.884"></status>
+</kw>
+<kw name="Submit search" library="LandingPage">
+<doc>Click the search button.</doc>
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<arguments>
+<arg>Wait Until Keyword Succeeds</arg>
+<arg>${MAX_TIMEOUT}</arg>
+<arg>${RETRY_INTERBAL}</arg>
+<arg>SeleniumLibrary.Click Element</arg>
+<arg>${search_button}</arg>
+</arguments>
+<assign>
+<var>${status}</var>
+<var>${message}</var>
+</assign>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>${MAX_TIMEOUT}</arg>
+<arg>${RETRY_INTERBAL}</arg>
+<arg>SeleniumLibrary.Click Element</arg>
+<arg>${search_button}</arg>
+</arguments>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${search_button}</arg>
+</arguments>
+<msg timestamp="20200207 04:43:55.886" level="INFO">Clicking element 'xpath://button[@data-test-id="find-restaurants-button"]'.</msg>
+<status status="PASS" starttime="20200207 04:43:55.885" endtime="20200207 04:45:19.946"></status>
+</kw>
+<status status="PASS" starttime="20200207 04:43:55.885" endtime="20200207 04:45:19.947"></status>
+</kw>
+<msg timestamp="20200207 04:45:19.947" level="INFO">${status} = PASS</msg>
+<msg timestamp="20200207 04:45:19.947" level="INFO">${message} = None</msg>
+<status status="PASS" starttime="20200207 04:43:55.884" endtime="20200207 04:45:19.947"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${status}'=='FAIL'</arg>
+<arg>run keyword</arg>
+<arg>AND</arg>
+<arg>FAIL</arg>
+<arg>Unable To click search button</arg>
+</arguments>
+<status status="PASS" starttime="20200207 04:45:19.947" endtime="20200207 04:45:19.948"></status>
+</kw>
+<status status="PASS" starttime="20200207 04:43:55.884" endtime="20200207 04:45:19.948"></status>
+</kw>
+<kw name="Verify search result" library="SearchPage">
+<doc>This keyword verifies search result page is loaded correctly</doc>
+<arguments>
+<arg>${postcode}</arg>
+</arguments>
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<arguments>
+<arg>wait until keyword succeeds</arg>
+<arg>${MAX_TIMEOUT}</arg>
+<arg>${RETRY_INTERBAL}</arg>
+<arg>page should contain element</arg>
+<arg>${open_restuarnt_xpath}</arg>
+</arguments>
+<assign>
+<var>${status}</var>
+<var>${message}</var>
+</assign>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>${MAX_TIMEOUT}</arg>
+<arg>${RETRY_INTERBAL}</arg>
+<arg>page should contain element</arg>
+<arg>${open_restuarnt_xpath}</arg>
+</arguments>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${open_restuarnt_xpath}</arg>
+</arguments>
+<msg timestamp="20200207 04:45:20.014" level="INFO">Current page contains element '//span[@data-search-count="openrestaurants"]'.</msg>
+<status status="PASS" starttime="20200207 04:45:19.951" endtime="20200207 04:45:20.014"></status>
+</kw>
+<status status="PASS" starttime="20200207 04:45:19.950" endtime="20200207 04:45:20.014"></status>
+</kw>
+<msg timestamp="20200207 04:45:20.015" level="INFO">${status} = PASS</msg>
+<msg timestamp="20200207 04:45:20.015" level="INFO">${message} = None</msg>
+<status status="PASS" starttime="20200207 04:45:19.949" endtime="20200207 04:45:20.015"></status>
+</kw>
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<arguments>
+<arg>wait until keyword succeeds</arg>
+<arg>${MAX_TIMEOUT}</arg>
+<arg>${RETRY_INTERBAL}</arg>
+<arg>element should contain</arg>
+<arg>${postcode_header}</arg>
+<arg>${postcode}</arg>
+</arguments>
+<assign>
+<var>${status}</var>
+<var>${message}</var>
+</assign>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>${MAX_TIMEOUT}</arg>
+<arg>${RETRY_INTERBAL}</arg>
+<arg>element should contain</arg>
+<arg>${postcode_header}</arg>
+<arg>${postcode}</arg>
+</arguments>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<arguments>
+<arg>${postcode_header}</arg>
+<arg>${postcode}</arg>
+</arguments>
+<msg timestamp="20200207 04:45:21.084" level="INFO">Element '//div[@class="c-locationHeader-container"]//h1[@class="c-locationHeader-title"]' contains text 'AR51 1AA'.</msg>
+<status status="PASS" starttime="20200207 04:45:20.017" endtime="20200207 04:45:21.084"></status>
+</kw>
+<status status="PASS" starttime="20200207 04:45:20.016" endtime="20200207 04:45:21.084"></status>
+</kw>
+<msg timestamp="20200207 04:45:21.084" level="INFO">${status} = PASS</msg>
+<msg timestamp="20200207 04:45:21.084" level="INFO">${message} = None</msg>
+<status status="PASS" starttime="20200207 04:45:20.015" endtime="20200207 04:45:21.085"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${status}'=='FAIL'</arg>
+<arg>run keyword</arg>
+<arg>FAIL</arg>
+<arg>Unable to find restaurannts</arg>
+</arguments>
+<status status="PASS" starttime="20200207 04:45:21.085" endtime="20200207 04:45:21.086"></status>
+</kw>
+<status status="PASS" starttime="20200207 04:45:19.949" endtime="20200207 04:45:21.086"></status>
+</kw>
+<status status="PASS" starttime="20200207 04:43:55.675" endtime="20200207 04:45:21.086"></status>
+</kw>
+<kw name="Common Test Teardown" library="Common" type="teardown">
+<doc>All test cases should use this in Test Teardown.</doc>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200207 04:45:21.087" endtime="20200207 04:45:28.181"></status>
+</kw>
+<status status="PASS" starttime="20200207 04:45:21.087" endtime="20200207 04:45:28.182"></status>
+</kw>
+<doc>This testcase verifies user is able to find restaurant in an area using postcode</doc>
+<tags>
+<tag>Justeat</tag>
+</tags>
+<status status="PASS" starttime="20200207 04:43:15.741" endtime="20200207 04:45:28.183" critical="yes"></status>
+</test>
+<test id="s1-t2" name="Search restaurants by cuisine in an area">
+<kw name="Common Test Setup" library="Common" type="setup">
+<doc>All test cases should use this in Test Setup.</doc>
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>${URL}</arg>
+<arg>${Browser}</arg>
+</arguments>
+<msg timestamp="20200207 04:45:28.196" level="INFO">Opening browser 'chrome' to base url 'http://www.just-eat.co.uk'.</msg>
+<status status="PASS" starttime="20200207 04:45:28.194" endtime="20200207 04:45:54.120"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20200207 04:45:54.120" endtime="20200207 04:45:55.352"></status>
+</kw>
+<kw name="Verify home page loaded correctly" library="Common">
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<arguments>
+<arg>wait until keyword succeeds</arg>
+<arg>${MAX_TIMEOUT}</arg>
+<arg>${RETRY_INTERBAL}</arg>
+<arg>page should contain element</arg>
+<arg>${homepage_search_box}</arg>
+</arguments>
+<assign>
+<var>${status}</var>
+<var>${message}</var>
+</assign>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>${MAX_TIMEOUT}</arg>
+<arg>${RETRY_INTERBAL}</arg>
+<arg>page should contain element</arg>
+<arg>${homepage_search_box}</arg>
+</arguments>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${homepage_search_box}</arg>
+</arguments>
+<msg timestamp="20200207 04:45:55.372" level="INFO">Current page contains element '//div[@data-test-id="searchBoxContainer"]'.</msg>
+<status status="PASS" starttime="20200207 04:45:55.355" endtime="20200207 04:45:55.372"></status>
+</kw>
+<status status="PASS" starttime="20200207 04:45:55.354" endtime="20200207 04:45:55.372"></status>
+</kw>
+<msg timestamp="20200207 04:45:55.372" level="INFO">${status} = PASS</msg>
+<msg timestamp="20200207 04:45:55.372" level="INFO">${message} = None</msg>
+<status status="PASS" starttime="20200207 04:45:55.353" endtime="20200207 04:45:55.372"></status>
+</kw>
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<arguments>
+<arg>wait until keyword succeeds</arg>
+<arg>${MAX_TIMEOUT}</arg>
+<arg>${RETRY_INTERBAL}</arg>
+<arg>page should contain</arg>
+<arg>Find restaurants delivering right now, near you</arg>
+</arguments>
+<assign>
+<var>${status}</var>
+<var>${message}</var>
+</assign>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>${MAX_TIMEOUT}</arg>
+<arg>${RETRY_INTERBAL}</arg>
+<arg>page should contain</arg>
+<arg>Find restaurants delivering right now, near you</arg>
+</arguments>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>Find restaurants delivering right now, near you</arg>
+</arguments>
+<msg timestamp="20200207 04:45:55.392" level="INFO">Current page contains text 'Find restaurants delivering right now, near you'.</msg>
+<status status="PASS" starttime="20200207 04:45:55.373" endtime="20200207 04:45:55.392"></status>
+</kw>
+<status status="PASS" starttime="20200207 04:45:55.373" endtime="20200207 04:45:55.392"></status>
+</kw>
+<msg timestamp="20200207 04:45:55.392" level="INFO">${status} = PASS</msg>
+<msg timestamp="20200207 04:45:55.393" level="INFO">${message} = None</msg>
+<status status="PASS" starttime="20200207 04:45:55.372" endtime="20200207 04:45:55.393"></status>
+</kw>
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<arguments>
+<arg>wait until keyword succeeds</arg>
+<arg>${MAX_TIMEOUT}</arg>
+<arg>${RETRY_INTERBAL}</arg>
+<arg>page should contain element</arg>
+<arg>${footer-locations-cuisines}</arg>
+</arguments>
+<assign>
+<var>${status}</var>
+<var>${message}</var>
+</assign>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>${MAX_TIMEOUT}</arg>
+<arg>${RETRY_INTERBAL}</arg>
+<arg>page should contain element</arg>
+<arg>${footer-locations-cuisines}</arg>
+</arguments>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${footer-locations-cuisines}</arg>
+</arguments>
+<msg timestamp="20200207 04:45:55.408" level="INFO">Current page contains element '//ul[@id="footer-locations" or @id="footer-top-cuisines"]'.</msg>
+<status status="PASS" starttime="20200207 04:45:55.394" endtime="20200207 04:45:55.408"></status>
+</kw>
+<status status="PASS" starttime="20200207 04:45:55.393" endtime="20200207 04:45:55.408"></status>
+</kw>
+<msg timestamp="20200207 04:45:55.408" level="INFO">${status} = PASS</msg>
+<msg timestamp="20200207 04:45:55.409" level="INFO">${message} = None</msg>
+<status status="PASS" starttime="20200207 04:45:55.393" endtime="20200207 04:45:55.409"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${status}'=='FAIL'</arg>
+<arg>run keyword</arg>
+<arg>FAIL</arg>
+<arg>Home Page Failed to load</arg>
+</arguments>
+<status status="PASS" starttime="20200207 04:45:55.409" endtime="20200207 04:45:55.409"></status>
+</kw>
+<status status="PASS" starttime="20200207 04:45:55.352" endtime="20200207 04:45:55.409"></status>
+</kw>
+<status status="PASS" starttime="20200207 04:45:28.193" endtime="20200207 04:45:55.410"></status>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<arguments>
+<arg>${cuisine}</arg>
+<arg>pizza</arg>
+</arguments>
+<msg timestamp="20200207 04:45:55.411" level="INFO">${cuisine} = pizza</msg>
+<status status="PASS" starttime="20200207 04:45:55.410" endtime="20200207 04:45:55.411"></status>
+</kw>
+<kw name="Search for restaurants by area" library="JustEat">
+<doc>This keyword finds restaurants in specifc area(using postcode)
+Postcode is passed as an argument</doc>
+<arguments>
+<arg>${postcode}</arg>
+</arguments>
+<kw name="Enter search address" library="LandingPage">
+<doc>Enter postcode in search box.</doc>
+<arguments>
+<arg>${postcode}</arg>
+</arguments>
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<arguments>
+<arg>Wait Until Keyword Succeeds</arg>
+<arg>${MAX_TIMEOUT}</arg>
+<arg>${RETRY_INTERBAL}</arg>
+<arg>SeleniumLibrary.Input Text</arg>
+<arg>${search_address_input}</arg>
+<arg>${postcode}</arg>
+</arguments>
+<assign>
+<var>${status}</var>
+<var>${message}</var>
+</assign>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>${MAX_TIMEOUT}</arg>
+<arg>${RETRY_INTERBAL}</arg>
+<arg>SeleniumLibrary.Input Text</arg>
+<arg>${search_address_input}</arg>
+<arg>${postcode}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${search_address_input}</arg>
+<arg>${postcode}</arg>
+</arguments>
+<msg timestamp="20200207 04:45:55.414" level="INFO">Typing text 'AR51 1AA' into text field 'xpath://input[@data-test-id="address-box-input"]'.</msg>
+<status status="PASS" starttime="20200207 04:45:55.414" endtime="20200207 04:45:55.613"></status>
+</kw>
+<status status="PASS" starttime="20200207 04:45:55.413" endtime="20200207 04:45:55.613"></status>
+</kw>
+<msg timestamp="20200207 04:45:55.613" level="INFO">${status} = PASS</msg>
+<msg timestamp="20200207 04:45:55.613" level="INFO">${message} = None</msg>
+<status status="PASS" starttime="20200207 04:45:55.413" endtime="20200207 04:45:55.613"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${status}'=='FAIL'</arg>
+<arg>run keyword</arg>
+<arg>FAIL</arg>
+<arg>Unable to enter postcode in search box</arg>
+</arguments>
+<status status="PASS" starttime="20200207 04:45:55.613" endtime="20200207 04:45:55.614"></status>
+</kw>
+<status status="PASS" starttime="20200207 04:45:55.412" endtime="20200207 04:45:55.614"></status>
+</kw>
+<kw name="Submit search" library="LandingPage">
+<doc>Click the search button.</doc>
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<arguments>
+<arg>Wait Until Keyword Succeeds</arg>
+<arg>${MAX_TIMEOUT}</arg>
+<arg>${RETRY_INTERBAL}</arg>
+<arg>SeleniumLibrary.Click Element</arg>
+<arg>${search_button}</arg>
+</arguments>
+<assign>
+<var>${status}</var>
+<var>${message}</var>
+</assign>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>${MAX_TIMEOUT}</arg>
+<arg>${RETRY_INTERBAL}</arg>
+<arg>SeleniumLibrary.Click Element</arg>
+<arg>${search_button}</arg>
+</arguments>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${search_button}</arg>
+</arguments>
+<msg timestamp="20200207 04:45:55.616" level="INFO">Clicking element 'xpath://button[@data-test-id="find-restaurants-button"]'.</msg>
+<status status="PASS" starttime="20200207 04:45:55.616" endtime="20200207 04:46:12.160"></status>
+</kw>
+<status status="PASS" starttime="20200207 04:45:55.615" endtime="20200207 04:46:12.161"></status>
+</kw>
+<msg timestamp="20200207 04:46:12.161" level="INFO">${status} = PASS</msg>
+<msg timestamp="20200207 04:46:12.161" level="INFO">${message} = None</msg>
+<status status="PASS" starttime="20200207 04:45:55.615" endtime="20200207 04:46:12.161"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${status}'=='FAIL'</arg>
+<arg>run keyword</arg>
+<arg>AND</arg>
+<arg>FAIL</arg>
+<arg>Unable To click search button</arg>
+</arguments>
+<status status="PASS" starttime="20200207 04:46:12.161" endtime="20200207 04:46:12.162"></status>
+</kw>
+<status status="PASS" starttime="20200207 04:45:55.614" endtime="20200207 04:46:12.162"></status>
+</kw>
+<kw name="Verify search result" library="SearchPage">
+<doc>This keyword verifies search result page is loaded correctly</doc>
+<arguments>
+<arg>${postcode}</arg>
+</arguments>
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<arguments>
+<arg>wait until keyword succeeds</arg>
+<arg>${MAX_TIMEOUT}</arg>
+<arg>${RETRY_INTERBAL}</arg>
+<arg>page should contain element</arg>
+<arg>${open_restuarnt_xpath}</arg>
+</arguments>
+<assign>
+<var>${status}</var>
+<var>${message}</var>
+</assign>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>${MAX_TIMEOUT}</arg>
+<arg>${RETRY_INTERBAL}</arg>
+<arg>page should contain element</arg>
+<arg>${open_restuarnt_xpath}</arg>
+</arguments>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${open_restuarnt_xpath}</arg>
+</arguments>
+<msg timestamp="20200207 04:46:12.475" level="INFO">Current page contains element '//span[@data-search-count="openrestaurants"]'.</msg>
+<status status="PASS" starttime="20200207 04:46:12.164" endtime="20200207 04:46:12.475"></status>
+</kw>
+<status status="PASS" starttime="20200207 04:46:12.163" endtime="20200207 04:46:12.475"></status>
+</kw>
+<msg timestamp="20200207 04:46:12.475" level="INFO">${status} = PASS</msg>
+<msg timestamp="20200207 04:46:12.475" level="INFO">${message} = None</msg>
+<status status="PASS" starttime="20200207 04:46:12.163" endtime="20200207 04:46:12.475"></status>
+</kw>
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<arguments>
+<arg>wait until keyword succeeds</arg>
+<arg>${MAX_TIMEOUT}</arg>
+<arg>${RETRY_INTERBAL}</arg>
+<arg>element should contain</arg>
+<arg>${postcode_header}</arg>
+<arg>${postcode}</arg>
+</arguments>
+<assign>
+<var>${status}</var>
+<var>${message}</var>
+</assign>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>${MAX_TIMEOUT}</arg>
+<arg>${RETRY_INTERBAL}</arg>
+<arg>element should contain</arg>
+<arg>${postcode_header}</arg>
+<arg>${postcode}</arg>
+</arguments>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<arguments>
+<arg>${postcode_header}</arg>
+<arg>${postcode}</arg>
+</arguments>
+<msg timestamp="20200207 04:46:12.696" level="INFO">Element '//div[@class="c-locationHeader-container"]//h1[@class="c-locationHeader-title"]' contains text 'AR51 1AA'.</msg>
+<status status="PASS" starttime="20200207 04:46:12.477" endtime="20200207 04:46:12.697"></status>
+</kw>
+<status status="PASS" starttime="20200207 04:46:12.476" endtime="20200207 04:46:12.697"></status>
+</kw>
+<msg timestamp="20200207 04:46:12.697" level="INFO">${status} = PASS</msg>
+<msg timestamp="20200207 04:46:12.697" level="INFO">${message} = None</msg>
+<status status="PASS" starttime="20200207 04:46:12.476" endtime="20200207 04:46:12.697"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${status}'=='FAIL'</arg>
+<arg>run keyword</arg>
+<arg>FAIL</arg>
+<arg>Unable to find restaurannts</arg>
+</arguments>
+<status status="PASS" starttime="20200207 04:46:12.698" endtime="20200207 04:46:12.698"></status>
+</kw>
+<status status="PASS" starttime="20200207 04:46:12.162" endtime="20200207 04:46:12.699"></status>
+</kw>
+<status status="PASS" starttime="20200207 04:45:55.412" endtime="20200207 04:46:12.699"></status>
+</kw>
+<kw name="Search for restaurants by cuisine" library="JustEat">
+<doc>This keyword finds restaurants by cuisine in specifc area
+Cuisine is passed as an argument</doc>
+<arguments>
+<arg>${cuisine}</arg>
+</arguments>
+<kw name="Select cuisine from popular cuisine tile" library="SearchPage">
+<doc>This keyword clicks on cuisine in Poular Cuisine Tile</doc>
+<arguments>
+<arg>${cuisine}</arg>
+</arguments>
+<kw name="Click on cuisine" library="SearchPage">
+<doc>This keyword clicks on cusine in Popular cuisine Tile</doc>
+<arguments>
+<arg>${cuisine}</arg>
+</arguments>
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<arguments>
+<arg>Wait Until Keyword Succeeds</arg>
+<arg>${MAX_TIMEOUT}</arg>
+<arg>${RETRY_INTERBAL}</arg>
+<arg>click element</arg>
+<arg>${${cuisine}_popularcuisine_xpath}</arg>
+</arguments>
+<assign>
+<var>${status}</var>
+<var>${message}</var>
+</assign>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>${MAX_TIMEOUT}</arg>
+<arg>${RETRY_INTERBAL}</arg>
+<arg>click element</arg>
+<arg>${${cuisine}_popularcuisine_xpath}</arg>
+</arguments>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${${cuisine}_popularcuisine_xpath}</arg>
+</arguments>
+<msg timestamp="20200207 04:46:12.704" level="INFO">Clicking element '//input[@id="pizza-desktop-tile"]//parent::span'.</msg>
+<status status="PASS" starttime="20200207 04:46:12.703" endtime="20200207 04:46:13.466"></status>
+</kw>
+<status status="PASS" starttime="20200207 04:46:12.702" endtime="20200207 04:46:13.466"></status>
+</kw>
+<msg timestamp="20200207 04:46:13.467" level="INFO">${status} = PASS</msg>
+<msg timestamp="20200207 04:46:13.467" level="INFO">${message} = None</msg>
+<status status="PASS" starttime="20200207 04:46:12.702" endtime="20200207 04:46:13.467"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${status}'=='FAIL'</arg>
+<arg>run keyword</arg>
+<arg>FAIL</arg>
+<arg>Unable To select ${cuisine} from Popular Cuisine Tiles</arg>
+</arguments>
+<status status="PASS" starttime="20200207 04:46:13.467" endtime="20200207 04:46:13.468"></status>
+</kw>
+<status status="PASS" starttime="20200207 04:46:12.701" endtime="20200207 04:46:13.468"></status>
+</kw>
+<kw name="Verify cuisine should be checked in popular cuisine tile" library="SearchPage">
+<doc>This keyword verifies that after selecting, cusisine should be checked</doc>
+<arguments>
+<arg>${cuisine}</arg>
+</arguments>
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<arguments>
+<arg>Wait Until Keyword Succeeds</arg>
+<arg>${MAX_TIMEOUT}</arg>
+<arg>${RETRY_INTERBAL}</arg>
+<arg>checkbox should be selected</arg>
+<arg>${${cuisine}_checkbox_popularcuisine}</arg>
+</arguments>
+<assign>
+<var>${status}</var>
+<var>${message}</var>
+</assign>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>${MAX_TIMEOUT}</arg>
+<arg>${RETRY_INTERBAL}</arg>
+<arg>checkbox should be selected</arg>
+<arg>${${cuisine}_checkbox_popularcuisine}</arg>
+</arguments>
+<kw name="Checkbox Should Be Selected" library="SeleniumLibrary">
+<doc>Verifies checkbox ``locator`` is selected/checked.</doc>
+<arguments>
+<arg>${${cuisine}_checkbox_popularcuisine}</arg>
+</arguments>
+<msg timestamp="20200207 04:46:13.472" level="INFO">Verifying checkbox '//input[@id="pizza-desktop-tile"]' is selected.</msg>
+<status status="PASS" starttime="20200207 04:46:13.472" endtime="20200207 04:46:31.271"></status>
+</kw>
+<status status="PASS" starttime="20200207 04:46:13.470" endtime="20200207 04:46:31.271"></status>
+</kw>
+<msg timestamp="20200207 04:46:31.271" level="INFO">${status} = PASS</msg>
+<msg timestamp="20200207 04:46:31.271" level="INFO">${message} = None</msg>
+<status status="PASS" starttime="20200207 04:46:13.469" endtime="20200207 04:46:31.271"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${status}'=='FAIL'</arg>
+<arg>run keyword</arg>
+<arg>FAIL</arg>
+<arg>${cuisine} is not selected/checked</arg>
+</arguments>
+<status status="PASS" starttime="20200207 04:46:31.271" endtime="20200207 04:46:31.272"></status>
+</kw>
+<status status="PASS" starttime="20200207 04:46:13.468" endtime="20200207 04:46:31.272"></status>
+</kw>
+<status status="PASS" starttime="20200207 04:46:12.700" endtime="20200207 04:46:31.272"></status>
+</kw>
+<kw name="Verify cuisine search result" library="SearchPage">
+<doc>This keyword verifies the serach result by cuisine</doc>
+<arguments>
+<arg>${cuisine}</arg>
+</arguments>
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<arguments>
+<arg>Wait Until Keyword Succeeds</arg>
+<arg>${MAX_TIMEOUT}</arg>
+<arg>${RETRY_INTERBAL}</arg>
+<arg>page should contain element</arg>
+<arg>//div[@data-test-id="searchresults"]//p[contains(@data-cuisine-names, "${cuisine}")]</arg>
+</arguments>
+<assign>
+<var>${status}</var>
+<var>${message}</var>
+</assign>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>${MAX_TIMEOUT}</arg>
+<arg>${RETRY_INTERBAL}</arg>
+<arg>page should contain element</arg>
+<arg>//div[@data-test-id="searchresults"]//p[contains(@data-cuisine-names, "${cuisine}")]</arg>
+</arguments>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>//div[@data-test-id="searchresults"]//p[contains(@data-cuisine-names, "${cuisine}")]</arg>
+</arguments>
+<msg timestamp="20200207 04:46:31.296" level="INFO">Current page contains element '//div[@data-test-id="searchresults"]//p[contains(@data-cuisine-names, "pizza")]'.</msg>
+<status status="PASS" starttime="20200207 04:46:31.274" endtime="20200207 04:46:31.296"></status>
+</kw>
+<status status="PASS" starttime="20200207 04:46:31.273" endtime="20200207 04:46:31.296"></status>
+</kw>
+<msg timestamp="20200207 04:46:31.297" level="INFO">${status} = PASS</msg>
+<msg timestamp="20200207 04:46:31.297" level="INFO">${message} = None</msg>
+<status status="PASS" starttime="20200207 04:46:31.273" endtime="20200207 04:46:31.297"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${status}'=='FAIL'</arg>
+<arg>run keyword</arg>
+<arg>FAIL</arg>
+<arg>Not able to find restaurants by cuisine</arg>
+</arguments>
+<status status="PASS" starttime="20200207 04:46:31.297" endtime="20200207 04:46:31.297"></status>
+</kw>
+<status status="PASS" starttime="20200207 04:46:31.272" endtime="20200207 04:46:31.297"></status>
+</kw>
+<status status="PASS" starttime="20200207 04:46:12.700" endtime="20200207 04:46:31.298"></status>
+</kw>
+<kw name="Common Test Teardown" library="Common" type="teardown">
+<doc>All test cases should use this in Test Teardown.</doc>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200207 04:46:31.299" endtime="20200207 04:46:35.333"></status>
+</kw>
+<status status="PASS" starttime="20200207 04:46:31.298" endtime="20200207 04:46:35.333"></status>
+</kw>
+<doc>This testcase verifies user is able to find restaurant by cuisine (Pizza, chinese) in an area</doc>
+<tags>
+<tag>Justeat</tag>
+</tags>
+<status status="PASS" starttime="20200207 04:45:28.189" endtime="20200207 04:46:35.335" critical="yes"></status>
+</test>
+<test id="s1-t3" name="Search restaurants by special offers in an area">
+<kw name="Common Test Setup" library="Common" type="setup">
+<doc>All test cases should use this in Test Setup.</doc>
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>${URL}</arg>
+<arg>${Browser}</arg>
+</arguments>
+<msg timestamp="20200207 04:46:35.347" level="INFO">Opening browser 'chrome' to base url 'http://www.just-eat.co.uk'.</msg>
+<status status="PASS" starttime="20200207 04:46:35.346" endtime="20200207 04:46:52.317"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20200207 04:46:52.318" endtime="20200207 04:46:53.547"></status>
+</kw>
+<kw name="Verify home page loaded correctly" library="Common">
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<arguments>
+<arg>wait until keyword succeeds</arg>
+<arg>${MAX_TIMEOUT}</arg>
+<arg>${RETRY_INTERBAL}</arg>
+<arg>page should contain element</arg>
+<arg>${homepage_search_box}</arg>
+</arguments>
+<assign>
+<var>${status}</var>
+<var>${message}</var>
+</assign>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>${MAX_TIMEOUT}</arg>
+<arg>${RETRY_INTERBAL}</arg>
+<arg>page should contain element</arg>
+<arg>${homepage_search_box}</arg>
+</arguments>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${homepage_search_box}</arg>
+</arguments>
+<msg timestamp="20200207 04:46:53.565" level="INFO">Current page contains element '//div[@data-test-id="searchBoxContainer"]'.</msg>
+<status status="PASS" starttime="20200207 04:46:53.548" endtime="20200207 04:46:53.566"></status>
+</kw>
+<status status="PASS" starttime="20200207 04:46:53.548" endtime="20200207 04:46:53.566"></status>
+</kw>
+<msg timestamp="20200207 04:46:53.566" level="INFO">${status} = PASS</msg>
+<msg timestamp="20200207 04:46:53.566" level="INFO">${message} = None</msg>
+<status status="PASS" starttime="20200207 04:46:53.547" endtime="20200207 04:46:53.566"></status>
+</kw>
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<arguments>
+<arg>wait until keyword succeeds</arg>
+<arg>${MAX_TIMEOUT}</arg>
+<arg>${RETRY_INTERBAL}</arg>
+<arg>page should contain</arg>
+<arg>Find restaurants delivering right now, near you</arg>
+</arguments>
+<assign>
+<var>${status}</var>
+<var>${message}</var>
+</assign>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>${MAX_TIMEOUT}</arg>
+<arg>${RETRY_INTERBAL}</arg>
+<arg>page should contain</arg>
+<arg>Find restaurants delivering right now, near you</arg>
+</arguments>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>Find restaurants delivering right now, near you</arg>
+</arguments>
+<msg timestamp="20200207 04:46:53.591" level="INFO">Current page contains text 'Find restaurants delivering right now, near you'.</msg>
+<status status="PASS" starttime="20200207 04:46:53.568" endtime="20200207 04:46:53.591"></status>
+</kw>
+<status status="PASS" starttime="20200207 04:46:53.567" endtime="20200207 04:46:53.591"></status>
+</kw>
+<msg timestamp="20200207 04:46:53.591" level="INFO">${status} = PASS</msg>
+<msg timestamp="20200207 04:46:53.591" level="INFO">${message} = None</msg>
+<status status="PASS" starttime="20200207 04:46:53.566" endtime="20200207 04:46:53.591"></status>
+</kw>
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<arguments>
+<arg>wait until keyword succeeds</arg>
+<arg>${MAX_TIMEOUT}</arg>
+<arg>${RETRY_INTERBAL}</arg>
+<arg>page should contain element</arg>
+<arg>${footer-locations-cuisines}</arg>
+</arguments>
+<assign>
+<var>${status}</var>
+<var>${message}</var>
+</assign>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>${MAX_TIMEOUT}</arg>
+<arg>${RETRY_INTERBAL}</arg>
+<arg>page should contain element</arg>
+<arg>${footer-locations-cuisines}</arg>
+</arguments>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${footer-locations-cuisines}</arg>
+</arguments>
+<msg timestamp="20200207 04:46:53.611" level="INFO">Current page contains element '//ul[@id="footer-locations" or @id="footer-top-cuisines"]'.</msg>
+<status status="PASS" starttime="20200207 04:46:53.593" endtime="20200207 04:46:53.611"></status>
+</kw>
+<status status="PASS" starttime="20200207 04:46:53.592" endtime="20200207 04:46:53.611"></status>
+</kw>
+<msg timestamp="20200207 04:46:53.612" level="INFO">${status} = PASS</msg>
+<msg timestamp="20200207 04:46:53.612" level="INFO">${message} = None</msg>
+<status status="PASS" starttime="20200207 04:46:53.592" endtime="20200207 04:46:53.612"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${status}'=='FAIL'</arg>
+<arg>run keyword</arg>
+<arg>FAIL</arg>
+<arg>Home Page Failed to load</arg>
+</arguments>
+<status status="PASS" starttime="20200207 04:46:53.612" endtime="20200207 04:46:53.612"></status>
+</kw>
+<status status="PASS" starttime="20200207 04:46:53.547" endtime="20200207 04:46:53.612"></status>
+</kw>
+<status status="PASS" starttime="20200207 04:46:35.345" endtime="20200207 04:46:53.613"></status>
+</kw>
+<kw name="Search for restaurants by area" library="JustEat">
+<doc>This keyword finds restaurants in specifc area(using postcode)
+Postcode is passed as an argument</doc>
+<arguments>
+<arg>${postcode}</arg>
+</arguments>
+<kw name="Enter search address" library="LandingPage">
+<doc>Enter postcode in search box.</doc>
+<arguments>
+<arg>${postcode}</arg>
+</arguments>
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<arguments>
+<arg>Wait Until Keyword Succeeds</arg>
+<arg>${MAX_TIMEOUT}</arg>
+<arg>${RETRY_INTERBAL}</arg>
+<arg>SeleniumLibrary.Input Text</arg>
+<arg>${search_address_input}</arg>
+<arg>${postcode}</arg>
+</arguments>
+<assign>
+<var>${status}</var>
+<var>${message}</var>
+</assign>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>${MAX_TIMEOUT}</arg>
+<arg>${RETRY_INTERBAL}</arg>
+<arg>SeleniumLibrary.Input Text</arg>
+<arg>${search_address_input}</arg>
+<arg>${postcode}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${search_address_input}</arg>
+<arg>${postcode}</arg>
+</arguments>
+<msg timestamp="20200207 04:46:53.616" level="INFO">Typing text 'AR51 1AA' into text field 'xpath://input[@data-test-id="address-box-input"]'.</msg>
+<status status="PASS" starttime="20200207 04:46:53.616" endtime="20200207 04:46:53.858"></status>
+</kw>
+<status status="PASS" starttime="20200207 04:46:53.615" endtime="20200207 04:46:53.858"></status>
+</kw>
+<msg timestamp="20200207 04:46:53.859" level="INFO">${status} = PASS</msg>
+<msg timestamp="20200207 04:46:53.859" level="INFO">${message} = None</msg>
+<status status="PASS" starttime="20200207 04:46:53.615" endtime="20200207 04:46:53.859"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${status}'=='FAIL'</arg>
+<arg>run keyword</arg>
+<arg>FAIL</arg>
+<arg>Unable to enter postcode in search box</arg>
+</arguments>
+<status status="PASS" starttime="20200207 04:46:53.859" endtime="20200207 04:46:53.860"></status>
+</kw>
+<status status="PASS" starttime="20200207 04:46:53.614" endtime="20200207 04:46:53.860"></status>
+</kw>
+<kw name="Submit search" library="LandingPage">
+<doc>Click the search button.</doc>
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<arguments>
+<arg>Wait Until Keyword Succeeds</arg>
+<arg>${MAX_TIMEOUT}</arg>
+<arg>${RETRY_INTERBAL}</arg>
+<arg>SeleniumLibrary.Click Element</arg>
+<arg>${search_button}</arg>
+</arguments>
+<assign>
+<var>${status}</var>
+<var>${message}</var>
+</assign>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>${MAX_TIMEOUT}</arg>
+<arg>${RETRY_INTERBAL}</arg>
+<arg>SeleniumLibrary.Click Element</arg>
+<arg>${search_button}</arg>
+</arguments>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${search_button}</arg>
+</arguments>
+<msg timestamp="20200207 04:46:53.863" level="INFO">Clicking element 'xpath://button[@data-test-id="find-restaurants-button"]'.</msg>
+<status status="PASS" starttime="20200207 04:46:53.862" endtime="20200207 04:47:10.553"></status>
+</kw>
+<status status="PASS" starttime="20200207 04:46:53.861" endtime="20200207 04:47:10.553"></status>
+</kw>
+<msg timestamp="20200207 04:47:10.553" level="INFO">${status} = PASS</msg>
+<msg timestamp="20200207 04:47:10.553" level="INFO">${message} = None</msg>
+<status status="PASS" starttime="20200207 04:46:53.861" endtime="20200207 04:47:10.553"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${status}'=='FAIL'</arg>
+<arg>run keyword</arg>
+<arg>AND</arg>
+<arg>FAIL</arg>
+<arg>Unable To click search button</arg>
+</arguments>
+<status status="PASS" starttime="20200207 04:47:10.553" endtime="20200207 04:47:10.554"></status>
+</kw>
+<status status="PASS" starttime="20200207 04:46:53.860" endtime="20200207 04:47:10.554"></status>
+</kw>
+<kw name="Verify search result" library="SearchPage">
+<doc>This keyword verifies search result page is loaded correctly</doc>
+<arguments>
+<arg>${postcode}</arg>
+</arguments>
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<arguments>
+<arg>wait until keyword succeeds</arg>
+<arg>${MAX_TIMEOUT}</arg>
+<arg>${RETRY_INTERBAL}</arg>
+<arg>page should contain element</arg>
+<arg>${open_restuarnt_xpath}</arg>
+</arguments>
+<assign>
+<var>${status}</var>
+<var>${message}</var>
+</assign>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>${MAX_TIMEOUT}</arg>
+<arg>${RETRY_INTERBAL}</arg>
+<arg>page should contain element</arg>
+<arg>${open_restuarnt_xpath}</arg>
+</arguments>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${open_restuarnt_xpath}</arg>
+</arguments>
+<msg timestamp="20200207 04:47:10.847" level="INFO">Current page contains element '//span[@data-search-count="openrestaurants"]'.</msg>
+<status status="PASS" starttime="20200207 04:47:10.556" endtime="20200207 04:47:10.848"></status>
+</kw>
+<status status="PASS" starttime="20200207 04:47:10.555" endtime="20200207 04:47:10.848"></status>
+</kw>
+<msg timestamp="20200207 04:47:10.848" level="INFO">${status} = PASS</msg>
+<msg timestamp="20200207 04:47:10.848" level="INFO">${message} = None</msg>
+<status status="PASS" starttime="20200207 04:47:10.555" endtime="20200207 04:47:10.848"></status>
+</kw>
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<arguments>
+<arg>wait until keyword succeeds</arg>
+<arg>${MAX_TIMEOUT}</arg>
+<arg>${RETRY_INTERBAL}</arg>
+<arg>element should contain</arg>
+<arg>${postcode_header}</arg>
+<arg>${postcode}</arg>
+</arguments>
+<assign>
+<var>${status}</var>
+<var>${message}</var>
+</assign>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>${MAX_TIMEOUT}</arg>
+<arg>${RETRY_INTERBAL}</arg>
+<arg>element should contain</arg>
+<arg>${postcode_header}</arg>
+<arg>${postcode}</arg>
+</arguments>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<arguments>
+<arg>${postcode_header}</arg>
+<arg>${postcode}</arg>
+</arguments>
+<msg timestamp="20200207 04:47:11.070" level="INFO">Element '//div[@class="c-locationHeader-container"]//h1[@class="c-locationHeader-title"]' contains text 'AR51 1AA'.</msg>
+<status status="PASS" starttime="20200207 04:47:10.850" endtime="20200207 04:47:11.071"></status>
+</kw>
+<status status="PASS" starttime="20200207 04:47:10.849" endtime="20200207 04:47:11.071"></status>
+</kw>
+<msg timestamp="20200207 04:47:11.071" level="INFO">${status} = PASS</msg>
+<msg timestamp="20200207 04:47:11.071" level="INFO">${message} = None</msg>
+<status status="PASS" starttime="20200207 04:47:10.848" endtime="20200207 04:47:11.071"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${status}'=='FAIL'</arg>
+<arg>run keyword</arg>
+<arg>FAIL</arg>
+<arg>Unable to find restaurannts</arg>
+</arguments>
+<status status="PASS" starttime="20200207 04:47:11.072" endtime="20200207 04:47:11.072"></status>
+</kw>
+<status status="PASS" starttime="20200207 04:47:10.554" endtime="20200207 04:47:11.073"></status>
+</kw>
+<status status="PASS" starttime="20200207 04:46:53.613" endtime="20200207 04:47:11.073"></status>
+</kw>
+<kw name="Search for restaurants by special offers" library="JustEat">
+<doc>This keyword finds restaurants by special offers in specifc area</doc>
+<kw name="Select special offer filter" library="SearchPage">
+<doc>This keyword clicks on special offer in filters</doc>
+<kw name="Click on special offer" library="SearchPage">
+<doc>This keyword clicks on special offer in filters</doc>
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<arguments>
+<arg>Wait Until Keyword Succeeds</arg>
+<arg>${MAX_TIMEOUT}</arg>
+<arg>${RETRY_INTERBAL}</arg>
+<arg>click element</arg>
+<arg>${special_offer_filter_xpath}</arg>
+</arguments>
+<assign>
+<var>${status}</var>
+<var>${message}</var>
+</assign>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>${MAX_TIMEOUT}</arg>
+<arg>${RETRY_INTERBAL}</arg>
+<arg>click element</arg>
+<arg>${special_offer_filter_xpath}</arg>
+</arguments>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${special_offer_filter_xpath}</arg>
+</arguments>
+<msg timestamp="20200207 04:47:11.078" level="INFO">Clicking element '//input[@id="with_discounts"]//parent::span'.</msg>
+<status status="PASS" starttime="20200207 04:47:11.078" endtime="20200207 04:47:11.918"></status>
+</kw>
+<status status="PASS" starttime="20200207 04:47:11.077" endtime="20200207 04:47:11.918"></status>
+</kw>
+<msg timestamp="20200207 04:47:11.918" level="INFO">${status} = PASS</msg>
+<msg timestamp="20200207 04:47:11.918" level="INFO">${message} = None</msg>
+<status status="PASS" starttime="20200207 04:47:11.076" endtime="20200207 04:47:11.918"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${status}'=='FAIL'</arg>
+<arg>run keyword</arg>
+<arg>FAIL</arg>
+<arg>Unable To select special offer filter</arg>
+</arguments>
+<status status="PASS" starttime="20200207 04:47:11.919" endtime="20200207 04:47:11.920"></status>
+</kw>
+<status status="PASS" starttime="20200207 04:47:11.075" endtime="20200207 04:47:11.920"></status>
+</kw>
+<kw name="Verify special offer should be checked in filter" library="SearchPage">
+<doc>This keyword verifies special offer should be checked in filters</doc>
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<arguments>
+<arg>Wait Until Keyword Succeeds</arg>
+<arg>${MAX_TIMEOUT}</arg>
+<arg>${RETRY_INTERBAL}</arg>
+<arg>checkbox should be selected</arg>
+<arg>${special_offer_checkbox}</arg>
+</arguments>
+<assign>
+<var>${status}</var>
+<var>${message}</var>
+</assign>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>${MAX_TIMEOUT}</arg>
+<arg>${RETRY_INTERBAL}</arg>
+<arg>checkbox should be selected</arg>
+<arg>${special_offer_checkbox}</arg>
+</arguments>
+<kw name="Checkbox Should Be Selected" library="SeleniumLibrary">
+<doc>Verifies checkbox ``locator`` is selected/checked.</doc>
+<arguments>
+<arg>${special_offer_checkbox}</arg>
+</arguments>
+<msg timestamp="20200207 04:47:11.923" level="INFO">Verifying checkbox '//input[@id="with_discounts"]' is selected.</msg>
+<status status="PASS" starttime="20200207 04:47:11.923" endtime="20200207 04:47:27.766"></status>
+</kw>
+<status status="PASS" starttime="20200207 04:47:11.922" endtime="20200207 04:47:27.766"></status>
+</kw>
+<msg timestamp="20200207 04:47:27.766" level="INFO">${status} = PASS</msg>
+<msg timestamp="20200207 04:47:27.766" level="INFO">${message} = None</msg>
+<status status="PASS" starttime="20200207 04:47:11.922" endtime="20200207 04:47:27.766"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${status}'=='FAIL'</arg>
+<arg>run keyword</arg>
+<arg>FAIL</arg>
+<arg>Special offer filter is not selected/checked</arg>
+</arguments>
+<status status="PASS" starttime="20200207 04:47:27.766" endtime="20200207 04:47:27.767"></status>
+</kw>
+<status status="PASS" starttime="20200207 04:47:11.921" endtime="20200207 04:47:27.767"></status>
+</kw>
+<status status="PASS" starttime="20200207 04:47:11.075" endtime="20200207 04:47:27.768"></status>
+</kw>
+<kw name="Verify special offer search result" library="SearchPage">
+<doc>This keyword verifies the serach result by special offer</doc>
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<arguments>
+<arg>Wait Until Keyword Succeeds</arg>
+<arg>${MAX_TIMEOUT}</arg>
+<arg>${RETRY_INTERBAL}</arg>
+<arg>page should contain element</arg>
+<arg>${special_offer}</arg>
+</arguments>
+<assign>
+<var>${status}</var>
+<var>${message}</var>
+</assign>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>${MAX_TIMEOUT}</arg>
+<arg>${RETRY_INTERBAL}</arg>
+<arg>page should contain element</arg>
+<arg>${special_offer}</arg>
+</arguments>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${special_offer}</arg>
+</arguments>
+<msg timestamp="20200207 04:47:27.796" level="INFO">Current page contains element '//div[@data-test-id="searchresults"]//p[@data-test-id="restaurant_promo_text"]'.</msg>
+<status status="PASS" starttime="20200207 04:47:27.770" endtime="20200207 04:47:27.797"></status>
+</kw>
+<status status="PASS" starttime="20200207 04:47:27.770" endtime="20200207 04:47:27.797"></status>
+</kw>
+<msg timestamp="20200207 04:47:27.797" level="INFO">${status} = PASS</msg>
+<msg timestamp="20200207 04:47:27.797" level="INFO">${message} = None</msg>
+<status status="PASS" starttime="20200207 04:47:27.769" endtime="20200207 04:47:27.797"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${status}'=='FAIL'</arg>
+<arg>run keyword</arg>
+<arg>FAIL</arg>
+<arg>Not able to find restaurants by special offer</arg>
+</arguments>
+<status status="PASS" starttime="20200207 04:47:27.798" endtime="20200207 04:47:27.798"></status>
+</kw>
+<status status="PASS" starttime="20200207 04:47:27.768" endtime="20200207 04:47:27.799"></status>
+</kw>
+<status status="PASS" starttime="20200207 04:47:11.074" endtime="20200207 04:47:27.799"></status>
+</kw>
+<kw name="Common Test Teardown" library="Common" type="teardown">
+<doc>All test cases should use this in Test Teardown.</doc>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200207 04:47:27.801" endtime="20200207 04:47:30.114"></status>
+</kw>
+<status status="PASS" starttime="20200207 04:47:27.800" endtime="20200207 04:47:30.115"></status>
+</kw>
+<doc>This testcase verifies user is able to find restaurant by special offers in an area</doc>
+<tags>
+<tag>Justeat</tag>
+</tags>
+<status status="PASS" starttime="20200207 04:46:35.340" endtime="20200207 04:47:30.116" critical="yes"></status>
+</test>
+<doc>This suite covers tests to find restaurant with different criterias(area,cusine, special offers) in Justeat site</doc>
+<status status="PASS" starttime="20200207 04:43:14.614" endtime="20200207 04:47:30.122"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0">Critical Tests</stat>
+<stat pass="3" fail="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="3" fail="0">Justeat</stat>
+</tag>
+<suite>
+<stat pass="3" fail="0" id="s1" name="JustEat">JustEat</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
