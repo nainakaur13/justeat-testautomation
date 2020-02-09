@@ -68,8 +68,10 @@ It has easy-to-use tabular test data syntax which utilizes the **keyword-driven 
 
 ## Test Case Execution
 
-1. From Editor - Pycharm/IntelliJ
+1. From Editor - Pycharm/IntelliJ:
+
 		Open Project in editor > Terminal window
+		
 		Run any of the following commands:
 		
 	Type `"robot -d results Testcases/Justeat.robot"` 
