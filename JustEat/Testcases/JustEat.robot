@@ -13,7 +13,7 @@ ${postcode}  AR51 1AA
 
 *** Test Cases ***
 Search for restaurants in an area
-    [Documentation]     This testcase verifies user is able to find restaurant in an area using postcode
+    [Documentation]     This testcase verifies user is able to find restaurants in an area using postcode
     [Tags]    Justeat
     JustEat.Search for restaurants by area  ${postcode}
 
