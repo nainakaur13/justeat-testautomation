@@ -40,7 +40,7 @@ It has easy-to-use tabular test data syntax which utilizes the **keyword-driven 
 - Follows Procedural Style
 - Break script into keywords which can be reused by multiple testcases. Improves ability to decipher test results
 -  Move keywords to Resource file
--  Follows **Page Object Model**. Create page objects in a resounce file. A one place for all actions/locators
+-  Follows **Page Object Model**. Create page objects in a resource directory. A one place for all actions/locators
 
 ## Test Scenarios
 
