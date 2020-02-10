@@ -25,10 +25,10 @@ It has easy-to-use tabular test data syntax which utilizes the **keyword-driven 
 
 - **/JustEat**  `Project`
 	 * **/Testcases**
-		 * Justeat.robot   `Script `
+		 * JustEat.robot   `Script `
 	 + **/Resources**
 		 + Common.robot  `Suite setup, Open browser etc `
-		 + Justeat.robot  `Keyword file `
+		 + JustEat.robot  `Keyword file `
 		 +  **/PO**  `Page Objects `
 			 + LandingPage.robot
 			 + SearchPage.robot
