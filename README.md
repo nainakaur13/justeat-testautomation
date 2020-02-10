@@ -75,14 +75,14 @@ It has easy-to-use tabular test data syntax which utilizes the **keyword-driven 
 		
 		Run any of the following commands:
 		
-	Type `"robot -d results Testcases/Justeat.robot"` 
+	Type `"robot -d results Testcases/JustEat.robot"` 
 	> **-d #directory** - create directory "Results" for test execution result files. It can be any absolute path in user system
 		 
-	Type `"robot -d results -i Justeat Testcases/Justeat.robot"` 
+	Type `"robot -d results -i Justeat Testcases/JustEat.robot"` 
 	> **-i #tagname** - This will run all those testcases having tag "Justeat"
 	 
-	Type `"robot -d results -t 'Search for restaurant in an area' Testcases/Justeat.robot"` 
-	> **-t "#testcasename"**  - This will execute specific testcase
+	Type `"robot -d results -t 'Search for restaurants in an area' Testcases/JustEat.robot"` 
+	> **-t "#testcasename"**  - This will execute specific testcase "Search for restaurants in an area" 
 
 2. From Command Window: CD to Project directory and execute any of the above commands
 
