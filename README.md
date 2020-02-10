@@ -18,7 +18,8 @@ It has easy-to-use tabular test data syntax which utilizes the **keyword-driven 
 		   `pip install robotframework-seleniumlibrary ` 
   - Desired Browsers 
    - Install Selenium Webdrivers for each browser 
-   - Install IDE: Pycharm/IntelliJ/RIDE  Install Intellibot Plugin
+   - Install IDE: Pycharm/IntelliJ/RIDE  
+   - Install Intellibot Plugin
 
 ## Project Structure
 
